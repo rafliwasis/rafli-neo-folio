@@ -1,37 +1,15 @@
 const SkillsSection = () => {
   const skills = [
-    { name: "SQL", category: "Database" },
-    { name: "Python", category: "Programming" },
-    { name: "Tableau", category: "Visualization" },
-    { name: "Power BI", category: "Visualization" },
-    { name: "Google Data Studio", category: "Visualization" },
-    { name: "dbt", category: "Data Engineering" },
-    { name: "Apache Airflow", category: "Data Engineering" },
-    { name: "Git", category: "Version Control" },
-    { name: "Docker", category: "DevOps" },
-    { name: "AWS", category: "Cloud" },
-    { name: "PostgreSQL", category: "Database" },
-    { name: "BigQuery", category: "Database" },
-    { name: "Snowflake", category: "Database" },
-    { name: "Pandas", category: "Programming" },
-    { name: "NumPy", category: "Programming" },
-    { name: "Scikit-learn", category: "Machine Learning" },
-    { name: "TensorFlow", category: "Machine Learning" },
-    { name: "R", category: "Programming" },
-    { name: "Excel", category: "Tools" },
-    { name: "Jupyter", category: "Tools" }
+    "SQL", "Python", "Tableau", "Power BI", "Google Data Studio", "dbt", 
+    "Apache Airflow", "Git", "Docker", "AWS", "PostgreSQL", "BigQuery", 
+    "Snowflake", "Pandas", "NumPy", "Scikit-learn", "TensorFlow", "R", "Excel", "Jupyter"
   ];
 
-  const categoryColors = {
-    "Database": "from-blue-500 to-blue-600",
-    "Programming": "from-green-500 to-green-600", 
-    "Visualization": "from-purple-500 to-purple-600",
-    "Data Engineering": "from-orange-500 to-orange-600",
-    "Version Control": "from-red-500 to-red-600",
-    "DevOps": "from-yellow-500 to-yellow-600",
-    "Cloud": "from-cyan-500 to-cyan-600",
-    "Machine Learning": "from-pink-500 to-pink-600",
-    "Tools": "from-indigo-500 to-indigo-600"
+  const skillCategories = {
+    "Programming Language": ["Python", "R", "SQL"],
+    "Data Analysis & BI": ["Tableau", "Power BI", "Google Data Studio", "Excel"],
+    "Data Science": ["Pandas", "NumPy", "Scikit-learn", "TensorFlow", "Jupyter"],
+    "Product Manager": ["Analytics", "A/B Testing", "User Research", "Strategy"]
   };
 
   // Duplicate the skills array for seamless scrolling
@@ -66,15 +44,10 @@ const SkillsSection = () => {
               >
                 <div className="futuristic-card min-w-max px-6 py-4 transition-all duration-300 hover:scale-105">
                   <div className="flex items-center gap-3">
-                    <div className={`w-3 h-3 rounded-full bg-gradient-to-r ${categoryColors[skill.category]} animate-glow-pulse`}></div>
-                    <div>
-                      <span className="text-foreground font-space font-medium text-lg group-hover:text-primary transition-colors">
-                        {skill.name}
-                      </span>
-                      <div className="text-muted-foreground font-space text-xs">
-                        {skill.category}
-                      </div>
-                    </div>
+                    <div className="w-3 h-3 rounded-full bg-gradient-to-r from-primary to-secondary animate-glow-pulse"></div>
+                    <span className="text-foreground font-space font-medium text-lg group-hover:text-primary transition-colors">
+                      {skill}
+                    </span>
                   </div>
                 </div>
               </div>
@@ -83,20 +56,24 @@ const SkillsSection = () => {
         </div>
 
         {/* Skills Categories */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mt-16">
-          {Object.keys(categoryColors).map((category, index) => (
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
+          {Object.entries(skillCategories).map(([category, tools], index) => (
             <div 
               key={category}
-              className="futuristic-card text-center group animate-fade-up"
+              className="text-center group animate-fade-up"
               style={{animationDelay: `${index * 0.1}s`}}
             >
-              <div className={`w-8 h-8 rounded-lg bg-gradient-to-r ${categoryColors[category]} mx-auto mb-3 group-hover:scale-110 transition-transform`}></div>
-              <h3 className="text-foreground font-space font-medium text-sm mb-1 group-hover:text-primary transition-colors">
+              <h3 className="text-foreground font-space font-bold text-lg mb-4 group-hover:text-primary transition-colors">
                 {category}
               </h3>
-              <p className="text-muted-foreground font-space text-xs">
-                {skills.filter(skill => skill.category === category).length} tools
-              </p>
+              <div className="space-y-2">
+                {tools.map((tool, toolIndex) => (
+                  <div key={toolIndex} className="flex items-center gap-2">
+                    <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                    <span className="text-muted-foreground font-space text-sm">{tool}</span>
+                  </div>
+                ))}
+              </div>
             </div>
           ))}
         </div>

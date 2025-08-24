@@ -84,12 +84,7 @@ const ExperienceSection = () => {
                     </div>
                   </div>
                   
-                  <p className="text-muted-foreground leading-relaxed font-space mb-6">
-                    {exp.description}
-                  </p>
-                  
                   <div>
-                    <h5 className="text-foreground font-space font-medium mb-3">Key Achievements:</h5>
                     <ul className="space-y-2">
                       {exp.achievements.map((achievement, achIndex) => (
                         <li key={achIndex} className="flex items-start gap-3">

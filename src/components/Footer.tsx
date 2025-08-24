@@ -1,4 +1,4 @@
-import { Github, Linkedin, ArrowUp } from "lucide-react";
+import { Github, Linkedin, ArrowUp, Instagram, MessageCircle, Mail } from "lucide-react";
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -37,6 +37,34 @@ const Footer = () => {
               title="GitHub Profile"
             >
               <Github className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
+            </a>
+
+            <a 
+              href="https://instagram.com/raflianggito" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 rounded-lg border border-border bg-card hover:bg-card/80 transition-all hover:shadow-lg hover:shadow-primary/20 group"
+              title="Instagram Profile"
+            >
+              <Instagram className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
+            </a>
+
+            <a 
+              href="https://wa.me/+628123456789" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 rounded-lg border border-border bg-card hover:bg-card/80 transition-all hover:shadow-lg hover:shadow-primary/20 group"
+              title="WhatsApp"
+            >
+              <MessageCircle className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
+            </a>
+
+            <a 
+              href="mailto:rafli.wasis@gmail.com"
+              className="p-3 rounded-lg border border-border bg-card hover:bg-card/80 transition-all hover:shadow-lg hover:shadow-primary/20 group"
+              title="Email"
+            >
+              <Mail className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
             </a>
 
             <button 

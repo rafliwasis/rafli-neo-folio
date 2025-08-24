@@ -74,28 +74,8 @@ const ProjectsSection = () => {
               style={{animationDelay: `${index * 0.1}s`}}
             >
               <div className="flex flex-col h-full">
-                <div className="flex items-center justify-between mb-4">
-                  <span className="px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary font-space text-xs font-medium">
-                    {project.category}
-                  </span>
-                  <div className="flex gap-2">
-                    <a 
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="p-2 rounded-lg border border-border bg-card hover:bg-card/80 transition-all hover:shadow-lg hover:shadow-primary/20 group/icon"
-                    >
-                      <Github className="w-4 h-4 text-muted-foreground group-hover/icon:text-primary transition-colors" />
-                    </a>
-                    <a 
-                      href={project.demoUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="p-2 rounded-lg border border-border bg-card hover:bg-card/80 transition-all hover:shadow-lg hover:shadow-primary/20 group/icon"
-                    >
-                      <ExternalLink className="w-4 h-4 text-muted-foreground group-hover/icon:text-primary transition-colors" />
-                    </a>
-                  </div>
+                <div className="w-full h-48 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-lg mb-4 flex items-center justify-center">
+                  <span className="text-6xl">📊</span>
                 </div>
 
                 <h3 className="text-xl font-space font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
@@ -106,22 +86,36 @@ const ProjectsSection = () => {
                   {project.description}
                 </p>
 
-                <div className="flex flex-wrap gap-2 mb-4">
+                <div className="flex flex-wrap gap-2 mb-6">
                   {project.techStack.map((tech, techIndex) => (
                     <span 
                       key={techIndex}
-                      className="px-2 py-1 rounded bg-muted text-muted-foreground font-space text-xs"
+                      className="px-3 py-1 rounded-full bg-muted text-muted-foreground font-space text-xs"
                     >
                       {tech}
                     </span>
                   ))}
                 </div>
 
-                <div className="flex items-center justify-between pt-4 border-t border-border">
-                  <span className="text-muted-foreground font-space text-xs">
-                    View Project
-                  </span>
-                  <ArrowUpRight className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
+                <div className="flex gap-3">
+                  <a 
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 flex items-center justify-center gap-2 py-2 px-4 rounded-lg border border-border bg-card hover:bg-card/80 transition-all hover:shadow-lg hover:shadow-primary/20 group/icon"
+                  >
+                    <Github className="w-4 h-4 text-muted-foreground group-hover/icon:text-primary transition-colors" />
+                    <span className="text-muted-foreground group-hover/icon:text-primary transition-colors font-space text-sm">GitHub</span>
+                  </a>
+                  <a 
+                    href={project.demoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 flex items-center justify-center gap-2 py-2 px-4 rounded-lg border border-border bg-card hover:bg-card/80 transition-all hover:shadow-lg hover:shadow-primary/20 group/icon"
+                  >
+                    <ExternalLink className="w-4 h-4 text-muted-foreground group-hover/icon:text-primary transition-colors" />
+                    <span className="text-muted-foreground group-hover/icon:text-primary transition-colors font-space text-sm">Live Demo</span>
+                  </a>
                 </div>
               </div>
             </div>

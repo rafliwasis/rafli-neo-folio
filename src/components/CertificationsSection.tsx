@@ -74,18 +74,8 @@ const CertificationsSection = () => {
               style={{animationDelay: `${index * 0.1}s`}}
             >
               <div className="flex flex-col h-full">
-                <div className="flex items-start justify-between mb-4">
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-secondary to-accent flex items-center justify-center">
-                    <Award className="w-6 h-6 text-white" />
-                  </div>
-                  <a 
-                    href={cert.credentialUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-2 rounded-lg border border-border bg-card hover:bg-card/80 transition-all hover:shadow-lg hover:shadow-secondary/20 group/icon"
-                  >
-                    <ExternalLink className="w-4 h-4 text-muted-foreground group-hover/icon:text-secondary transition-colors" />
-                  </a>
+                <div className="w-full h-32 bg-gradient-to-br from-secondary/20 to-accent/20 rounded-lg mb-4 flex items-center justify-center">
+                  <Award className="w-12 h-12 text-secondary" />
                 </div>
 
                 <h3 className="text-lg font-space font-bold text-foreground mb-2 group-hover:text-secondary transition-colors leading-tight">
@@ -105,7 +95,7 @@ const CertificationsSection = () => {
                   {cert.description}
                 </p>
 
-                <div className="flex flex-wrap gap-1.5">
+                <div className="flex flex-wrap gap-1.5 mb-4">
                   {cert.skills.map((skill, skillIndex) => (
                     <span 
                       key={skillIndex}
@@ -115,6 +105,16 @@ const CertificationsSection = () => {
                     </span>
                   ))}
                 </div>
+
+                <a 
+                  href={cert.credentialUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 py-2 px-4 rounded-lg border border-border bg-card hover:bg-card/80 transition-all hover:shadow-lg hover:shadow-secondary/20 group/icon"
+                >
+                  <span className="text-muted-foreground group-hover/icon:text-secondary transition-colors font-space text-sm">Verify Certificate</span>
+                  <ExternalLink className="w-4 h-4 text-muted-foreground group-hover/icon:text-secondary transition-colors" />
+                </a>
               </div>
             </div>
           ))}

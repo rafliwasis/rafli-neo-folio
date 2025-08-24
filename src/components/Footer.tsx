@@ -2,7 +2,7 @@ import { Github, Linkedin, ArrowUp, Instagram, MessageCircle, Mail } from "lucid
 
 const Footer = () => {
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
@@ -10,17 +10,13 @@ const Footer = () => {
       <div className="container mx-auto max-w-6xl">
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="text-center md:text-left mb-6 md:mb-0">
-            <p className="text-muted-foreground font-space text-sm">
-              © 2025 Rafli Wasis Anggito | Product and Data Enthusiast
-            </p>
-            <p className="text-muted-foreground font-space text-xs mt-1">
-              Built with React, TypeScript & Tailwind CSS
-            </p>
+            <p className="text-muted-foreground font-space text-sm">© 2025 Rafli Wasis Anggito | Product and Data Enthusiast</p>
+            <p className="text-muted-foreground font-space text-xs mt-1">Built with React, TypeScript & Tailwind CSS</p>
           </div>
 
           <div className="flex items-center gap-4">
-            <a 
-              href="https://linkedin.com/in/raflianggito" 
+            <a
+              href="https://linkedin.com/in/rafliwasisanggito"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 rounded-lg border border-border bg-card hover:bg-card/80 transition-all hover:shadow-lg hover:shadow-primary/20 group"
@@ -28,9 +24,9 @@ const Footer = () => {
             >
               <Linkedin className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
             </a>
-            
-            <a 
-              href="https://github.com/raflianggito" 
+
+            <a
+              href="https://github.com/rafliwasis"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 rounded-lg border border-border bg-card hover:bg-card/80 transition-all hover:shadow-lg hover:shadow-primary/20 group"
@@ -39,8 +35,8 @@ const Footer = () => {
               <Github className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
             </a>
 
-            <a 
-              href="https://instagram.com/raflianggito" 
+            <a
+              href="https://instagram.com/raflwasis"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 rounded-lg border border-border bg-card hover:bg-card/80 transition-all hover:shadow-lg hover:shadow-primary/20 group"
@@ -49,8 +45,8 @@ const Footer = () => {
               <Instagram className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
             </a>
 
-            <a 
-              href="https://wa.me/+628123456789" 
+            <a
+              href="https://wa.me/+62811973317513"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 rounded-lg border border-border bg-card hover:bg-card/80 transition-all hover:shadow-lg hover:shadow-primary/20 group"
@@ -59,19 +55,17 @@ const Footer = () => {
               <MessageCircle className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
             </a>
 
-            <a 
-              href="mailto:rafli.wasis@gmail.com"
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=rafliwasisanggito@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
               className="p-3 rounded-lg border border-border bg-card hover:bg-card/80 transition-all hover:shadow-lg hover:shadow-primary/20 group"
               title="Email"
             >
               <Mail className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
             </a>
 
-            <button 
-              onClick={scrollToTop}
-              className="p-3 rounded-lg border border-border bg-card hover:bg-card/80 transition-all hover:shadow-lg hover:shadow-primary/20 group"
-              title="Back to Top"
-            >
+            <button onClick={scrollToTop} className="p-3 rounded-lg border border-border bg-card hover:bg-card/80 transition-all hover:shadow-lg hover:shadow-primary/20 group" title="Back to Top">
               <ArrowUp className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
             </button>
           </div>
@@ -82,8 +76,8 @@ const Footer = () => {
           <div className="flex justify-center">
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-primary rounded-full animate-glow-pulse"></div>
-              <div className="w-1 h-1 bg-secondary rounded-full animate-glow-pulse" style={{animationDelay: "0.5s"}}></div>
-              <div className="w-1.5 h-1.5 bg-accent rounded-full animate-glow-pulse" style={{animationDelay: "1s"}}></div>
+              <div className="w-1 h-1 bg-secondary rounded-full animate-glow-pulse" style={{ animationDelay: "0.5s" }}></div>
+              <div className="w-1.5 h-1.5 bg-accent rounded-full animate-glow-pulse" style={{ animationDelay: "1s" }}></div>
             </div>
           </div>
         </div>

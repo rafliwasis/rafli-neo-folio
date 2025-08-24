@@ -8,7 +8,7 @@ const ProjectsSection = () => {
       techStack: ["Tableau", "SQL", "Python", "PostgreSQL"],
       demoUrl: "https://demo.example.com",
       githubUrl: "https://github.com/rafli/customer-analytics",
-      category: "Business Intelligence"
+      category: "Business Intelligence",
     },
     {
       title: "Sales Forecasting Model",
@@ -16,7 +16,7 @@ const ProjectsSection = () => {
       techStack: ["Python", "Scikit-learn", "Docker", "Apache Airflow"],
       demoUrl: "https://demo.example.com",
       githubUrl: "https://github.com/rafli/sales-forecasting",
-      category: "Data Science"
+      category: "Data Science",
     },
     {
       title: "Product Performance Tracker",
@@ -24,7 +24,7 @@ const ProjectsSection = () => {
       techStack: ["Power BI", "Azure", "SQL Server", "Python"],
       demoUrl: "https://demo.example.com",
       githubUrl: "https://github.com/rafli/product-tracker",
-      category: "Product Analytics"
+      category: "Product Analytics",
     },
     {
       title: "Data Pipeline Automation",
@@ -32,7 +32,7 @@ const ProjectsSection = () => {
       techStack: ["Apache Airflow", "dbt", "Snowflake", "Python"],
       demoUrl: "https://demo.example.com",
       githubUrl: "https://github.com/rafli/data-pipeline",
-      category: "Data Engineering"
+      category: "Data Engineering",
     },
     {
       title: "Market Research Analytics",
@@ -40,7 +40,7 @@ const ProjectsSection = () => {
       techStack: ["R", "Shiny", "APIs", "PostgreSQL"],
       demoUrl: "https://demo.example.com",
       githubUrl: "https://github.com/rafli/market-research",
-      category: "Market Analytics"
+      category: "Market Analytics",
     },
     {
       title: "HR Analytics Platform",
@@ -48,8 +48,8 @@ const ProjectsSection = () => {
       techStack: ["Google Data Studio", "BigQuery", "Python", "TensorFlow"],
       demoUrl: "https://demo.example.com",
       githubUrl: "https://github.com/rafli/hr-analytics",
-      category: "HR Analytics"
-    }
+      category: "HR Analytics",
+    },
   ];
 
   return (
@@ -57,48 +57,33 @@ const ProjectsSection = () => {
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-space font-bold mb-4">
-            <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              Featured Projects
-            </span>
+            <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Featured Projects</span>
           </h2>
-          <p className="text-muted-foreground font-space text-lg max-w-2xl mx-auto">
-            A showcase of my data analytics and business intelligence projects that drive meaningful business impact.
-          </p>
+          <p className="text-muted-foreground font-space text-lg max-w-2xl mx-auto">A showcase of my data analytics and business intelligence projects that drive meaningful business impact.</p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <div 
-              key={index} 
-              className="futuristic-card group animate-fade-up" 
-              style={{animationDelay: `${index * 0.1}s`}}
-            >
+            <div key={index} className="futuristic-card group animate-fade-up" style={{ animationDelay: `${index * 0.1}s` }}>
               <div className="flex flex-col h-full">
                 <div className="w-full h-48 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-lg mb-4 flex items-center justify-center">
                   <span className="text-6xl">📊</span>
                 </div>
 
-                <h3 className="text-xl font-space font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
-                  {project.title}
-                </h3>
+                <h3 className="text-xl font-space font-bold text-foreground mb-3 group-hover:text-primary transition-colors">{project.title}</h3>
 
-                <p className="text-muted-foreground font-space text-sm leading-relaxed mb-6 flex-grow">
-                  {project.description}
-                </p>
+                <p className="text-muted-foreground font-space text-sm leading-relaxed mb-6 flex-grow">{project.description}</p>
 
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.techStack.map((tech, techIndex) => (
-                    <span 
-                      key={techIndex}
-                      className="px-3 py-1 rounded-full bg-muted text-muted-foreground font-space text-xs"
-                    >
+                    <span key={techIndex} className="px-3 py-1 rounded-full bg-muted text-muted-foreground font-space text-xs">
                       {tech}
                     </span>
                   ))}
                 </div>
 
                 <div className="flex gap-3">
-                  <a 
+                  <a
                     href={project.githubUrl}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -107,7 +92,7 @@ const ProjectsSection = () => {
                     <Github className="w-4 h-4 text-muted-foreground group-hover/icon:text-primary transition-colors" />
                     <span className="text-muted-foreground group-hover/icon:text-primary transition-colors font-space text-sm">GitHub</span>
                   </a>
-                  <a 
+                  <a
                     href={project.demoUrl}
                     target="_blank"
                     rel="noopener noreferrer"

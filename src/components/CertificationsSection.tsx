@@ -1,55 +1,37 @@
 import { Award, Calendar, ExternalLink } from "lucide-react";
+import mlSpecialization from "@/assets/ml-specialization.jpeg";
+import analyzeData from "@/assets/analyze-data.jpeg";
+import processData from "@/assets/process-data.jpeg";
 
 const CertificationsSection = () => {
   const certifications = [
     {
-      title: "Google Data Analytics Professional Certificate",
-      issuer: "Google Career Certificates",
-      date: "2023",
-      credentialUrl: "https://coursera.org/certificate/example",
-      description: "Comprehensive program covering data analysis process, tools, and techniques including SQL, R, Tableau, and data visualization.",
-      skills: ["Data Analysis", "SQL", "R Programming", "Tableau", "Data Visualization"]
+      title: "Machine Learning Specialization",
+      issuer: "DeepLearning.ai",
+      date: "Apr 2024",
+      credentialUrl: "https://www.coursera.org/account/accomplishments/specialization/7NGVAZAVDM9S",
+      description: "Comprehensive machine learning course covering supervised & unsupervised learning, neural networks, decision trees, clustering, anomaly detection, recommender systems, and scikit-learn",
+      skills: ["AI/ML", "Supervised Learning", "Unsupervised Learning", "Scikit-learn"],
+      imageUrl: mlSpecialization,
     },
     {
-      title: "Microsoft Certified: Data Analyst Associate",
-      issuer: "Microsoft",
-      date: "2023",
-      credentialUrl: "https://microsoft.com/certificate/example",
-      description: "Advanced certification demonstrating expertise in Power BI, data modeling, and business intelligence solutions.",
-      skills: ["Power BI", "DAX", "Data Modeling", "Azure", "Business Intelligence"]
+      title: "Analyze Data to Answer Questions",
+      issuer: "Google",
+      date: "Mar 2024",
+      credentialUrl: "https://www.coursera.org/account/accomplishments/verify/AUM8586LRV3T",
+      description: "Learned to organize, format, and analyze data using spreadsheets and SQL, including sorting, filtering, functions, and multi-table queries",
+      skills: ["Data Analysis", "Data Manipulation", "Google Spreadsheets", "Pivot Table & Chart"],
+      imageUrl: analyzeData,
     },
     {
-      title: "Tableau Desktop Specialist",
-      issuer: "Tableau",
-      date: "2022",
-      credentialUrl: "https://tableau.com/certificate/example",
-      description: "Certification validating skills in creating visualizations, dashboards, and data stories using Tableau Desktop.",
-      skills: ["Tableau", "Data Visualization", "Dashboard Design", "Analytics"]
+      title: "Process Data from Dirty to Clean",
+      issuer: "Google",
+      date: "Mar 2024",
+      credentialUrl: "https://www.coursera.org/account/accomplishments/verify/CCBZSBHX6UAH",
+      description: "Focused on ensuring data integrity, cleaning and querying databases with SQL, and validating cleaned data.",
+      skills: ["Data Cleansing", "Data Quality", "SQL", "Data Processing"],
+      imageUrl: processData,
     },
-    {
-      title: "AWS Certified Cloud Practitioner",
-      issuer: "Amazon Web Services",
-      date: "2022",
-      credentialUrl: "https://aws.amazon.com/certificate/example",
-      description: "Foundation-level certification demonstrating understanding of AWS cloud concepts and services.",
-      skills: ["AWS", "Cloud Computing", "Data Storage", "Security"]
-    },
-    {
-      title: "Python for Data Science",
-      issuer: "IBM",
-      date: "2021",
-      credentialUrl: "https://ibm.com/certificate/example",
-      description: "Specialized certification focusing on Python programming for data analysis, manipulation, and visualization.",
-      skills: ["Python", "Pandas", "NumPy", "Matplotlib", "Data Science"]
-    },
-    {
-      title: "SQL for Data Analysis",
-      issuer: "Udacity",
-      date: "2021",
-      credentialUrl: "https://udacity.com/certificate/example",
-      description: "Advanced SQL skills certification covering complex queries, database optimization, and data extraction techniques.",
-      skills: ["SQL", "Database Management", "Query Optimization", "Data Extraction"]
-    }
   ];
 
   return (
@@ -57,56 +39,42 @@ const CertificationsSection = () => {
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-space font-bold mb-4">
-            <span className="bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent">
-              Certifications
-            </span>
+            <span className="bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent">Certifications</span>
           </h2>
-          <p className="text-muted-foreground font-space text-lg max-w-2xl mx-auto">
-            Professional certifications that validate my expertise in data analytics and modern technology stack.
-          </p>
+          <p className="text-muted-foreground font-space text-lg max-w-2xl mx-auto">Professional certifications that validate my expertise in data analytics and modern technology stack.</p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {certifications.map((cert, index) => (
-            <div 
-              key={index} 
-              className="futuristic-card group animate-fade-up" 
-              style={{animationDelay: `${index * 0.1}s`}}
-            >
+            <div key={index} className="futuristic-card group animate-fade-up" style={{ animationDelay: `${index * 0.1}s` }}>
               <div className="flex flex-col h-full">
-                <div className="w-full h-32 bg-gradient-to-br from-secondary/20 to-accent/20 rounded-lg mb-4 flex items-center justify-center">
+                {/* <div className="w-full h-32 bg-gradient-to-br from-secondary/20 to-accent/20 rounded-lg mb-4 flex items-center justify-center">
                   <Award className="w-12 h-12 text-secondary" />
+                </div> */}
+                <div className="w-full h-40 rounded-md mb-4 flex items-center justify-center overflow-hidden bg-white">
+                  <img src={cert.imageUrl} alt={`${cert.title} certificate`} className="object-contain w-full h-full" />
                 </div>
 
-                <h3 className="text-lg font-space font-bold text-foreground mb-2 group-hover:text-secondary transition-colors leading-tight">
-                  {cert.title}
-                </h3>
+                <h3 className="text-lg font-space font-bold text-foreground mb-2 group-hover:text-secondary transition-colors leading-tight">{cert.title}</h3>
 
-                <h4 className="text-secondary font-space font-medium mb-2">
-                  {cert.issuer}
-                </h4>
+                <h4 className="text-secondary font-space font-medium mb-2">{cert.issuer}</h4>
 
                 <div className="flex items-center gap-2 text-muted-foreground mb-4">
                   <Calendar className="w-4 h-4" />
                   <span className="font-space text-sm">{cert.date}</span>
                 </div>
 
-                <p className="text-muted-foreground font-space text-sm leading-relaxed mb-4 flex-grow">
-                  {cert.description}
-                </p>
+                <p className="text-muted-foreground font-space text-sm leading-relaxed mb-4 flex-grow">{cert.description}</p>
 
                 <div className="flex flex-wrap gap-1.5 mb-4">
                   {cert.skills.map((skill, skillIndex) => (
-                    <span 
-                      key={skillIndex}
-                      className="px-2 py-1 rounded text-xs bg-secondary/10 text-secondary border border-secondary/20 font-space"
-                    >
+                    <span key={skillIndex} className="px-2 py-1 rounded text-xs bg-secondary/10 text-secondary border border-secondary/20 font-space">
                       {skill}
                     </span>
                   ))}
                 </div>
 
-                <a 
+                <a
                   href={cert.credentialUrl}
                   target="_blank"
                   rel="noopener noreferrer"

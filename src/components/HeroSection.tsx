@@ -1,5 +1,6 @@
 import { Download, Mail, Linkedin, ArrowDown } from "lucide-react";
 import profilePhoto from "@/assets/profile-photo.jpg";
+import cvDownload from "@/assets/CV_RafliWasisAnggito.pdf";
 
 const HeroSection = () => {
   const scrollToProjects = () => {
@@ -32,7 +33,7 @@ const HeroSection = () => {
           </h1>
 
           {/* Subheadline */}
-          <p className="text-xl md:text-2xl text-muted-foreground mb-12 font-space font-light leading-relaxed max-w-3xl mx-auto">Product and Data Enthusiast | Currently working as a Business Intelligence Analyst.</p>
+          <p className="text-xl md:text-2xl text-muted-foreground mb-12 font-space font-light leading-relaxed max-w-3xl mx-auto">Data and Product Enthusiast | Currently working as a Business Intelligence Analyst.</p>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
@@ -41,11 +42,15 @@ const HeroSection = () => {
             </button>
 
             <div className="flex gap-3">
-              <a href="/resume.pdf" download className="flex items-center gap-2 px-4 py-3 rounded-lg border border-border bg-card hover:bg-card/80 transition-all hover:shadow-lg hover:shadow-primary/20 group" title="Download CV">
+              <a
+                href={cvDownload}
+                download="Rafli_Wasis_Anggito_CV.pdf"
+                className="flex items-center gap-2 px-4 py-3 rounded-lg border border-border bg-card hover:bg-card/80 transition-all hover:shadow-lg hover:shadow-primary/20 group"
+                title="Download CV"
+              >
                 <Download className="w-5 h-5 text-foreground group-hover:text-primary transition-colors" />
                 <span className="text-sm font-space text-foreground group-hover:text-primary transition-colors">Download CV</span>
               </a>
-
               <a
                 href="https://linkedin.com/in/rafliwasisanggito"
                 target="_blank"

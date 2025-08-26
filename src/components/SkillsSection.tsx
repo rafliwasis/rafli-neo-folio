@@ -51,7 +51,7 @@ const SkillsSection = () => {
           <div className="absolute right-0 top-0 w-20 h-full bg-gradient-to-l from-background-secondary to-transparent z-10"></div> */}
 
           {/* Scrolling Skills */}
-          <div className="flex gap-4 animate-[scroll-x_40s_linear_infinite] hover:[animation-play-state:paused]">
+          <div className="flex gap-4 animate-[scroll-x_25s_linear_infinite] hover:[animation-play-state:paused]">
             {duplicatedSkills.map((skill, index) => (
               <div key={index} className="flex-shrink-0 group cursor-pointer">
                 <div className="futuristic-card min-w-max px-6 py-4 transition-all duration-10 hover:scale-105">

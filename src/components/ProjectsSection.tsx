@@ -19,19 +19,17 @@ const ProjectsSection = () => {
       category: "Data Science",
     },
     {
-      title: "Product Performance Tracker",
+      title: "Supermarket Sales Dashboard ",
       description: "Real-time monitoring system for product metrics and user engagement. Features automated alerting and comprehensive reporting for product teams.",
       techStack: ["Power BI", "Azure", "SQL Server", "Python"],
-      demoUrl: "https://demo.example.com",
-      githubUrl: "https://github.com/rafli/product-tracker",
+      githubUrl: "https://lookerstudio.google.com/s/m0Qa7NltvXo",
       category: "Product Analytics",
     },
     {
-      title: "Data Pipeline Automation",
+      title: "Retail Transaction Dashboard",
       description: "ETL pipeline that processes 1M+ records daily from multiple sources. Includes data validation, transformation, and automated quality checks.",
-      techStack: ["Apache Airflow", "dbt", "Snowflake", "Python"],
-      demoUrl: "https://demo.example.com",
-      githubUrl: "https://github.com/rafli/data-pipeline",
+      techStack: ["Google Looker Studio", "Google Sheets", "SQL"],
+      demoUrl: "https://lookerstudio.google.com/s/sZwJ8KFZLps",
       category: "Data Engineering",
     },
     {
@@ -79,24 +77,33 @@ const ProjectsSection = () => {
                 </div>
 
                 <div className="flex gap-3">
-                  <a
-                    href={project.githubUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex-1 flex items-center justify-center gap-2 py-2 px-4 rounded-lg border border-border bg-card hover:bg-card/80 transition-all hover:shadow-lg hover:shadow-primary/20 group/icon"
-                  >
-                    <Github className="w-4 h-4 text-muted-foreground group-hover/icon:text-primary transition-colors" />
-                    <span className="text-muted-foreground group-hover/icon:text-primary transition-colors font-space text-sm">GitHub</span>
-                  </a>
-                  <a
-                    href={project.demoUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex-1 flex items-center justify-center gap-2 py-2 px-4 rounded-lg border border-border bg-card hover:bg-card/80 transition-all hover:shadow-lg hover:shadow-primary/20 group/icon"
-                  >
-                    <ExternalLink className="w-4 h-4 text-muted-foreground group-hover/icon:text-primary transition-colors" />
-                    <span className="text-muted-foreground group-hover/icon:text-primary transition-colors font-space text-sm">Live Demo</span>
-                  </a>
+                  {project.githubUrl && (
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`${
+                        project.demoUrl ? "flex-1" : "w-1/2"
+                      } flex items-center justify-center gap-2 py-2 px-4 rounded-lg border border-border bg-card hover:bg-card/80 transition-all hover:shadow-lg hover:shadow-primary/20 group/icon`}
+                    >
+                      <Github className="w-4 h-4 text-muted-foreground group-hover/icon:text-primary transition-colors" />
+                      <span className="text-muted-foreground group-hover/icon:text-primary transition-colors font-space text-sm">GitHub</span>
+                    </a>
+                  )}
+
+                  {project.demoUrl && (
+                    <a
+                      href={project.demoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`${
+                        project.githubUrl ? "flex-1" : "w-1/2"
+                      } flex items-center justify-center gap-2 py-2 px-4 rounded-lg border border-border bg-card hover:bg-card/80 transition-all hover:shadow-lg hover:shadow-primary/20 group/icon`}
+                    >
+                      <ExternalLink className="w-4 h-4 text-muted-foreground group-hover/icon:text-primary transition-colors" />
+                      <span className="text-muted-foreground group-hover/icon:text-primary transition-colors font-space text-sm">Live Demo</span>
+                    </a>
+                  )}
                 </div>
               </div>
             </div>

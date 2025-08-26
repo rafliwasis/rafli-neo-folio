@@ -41,7 +41,6 @@ const SkillsSection = () => {
           <h2 className="text-4xl md:text-5xl font-space font-bold mb-4">
             <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Skills & Technologies</span>
           </h2>
-          <p className="text-muted-foreground font-space text-lg max-w-2xl mx-auto">Tools and technologies I use to transform data into actionable insights and drive business success.</p>
         </div>
 
         {/* Infinite Scroll Container */}

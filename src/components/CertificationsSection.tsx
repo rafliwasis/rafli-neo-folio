@@ -41,7 +41,6 @@ const CertificationsSection = () => {
           <h2 className="text-4xl md:text-5xl font-space font-bold mb-4">
             <span className="bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent">Certifications</span>
           </h2>
-          <p className="text-muted-foreground font-space text-lg max-w-2xl mx-auto">Professional certifications that validate my expertise in data analytics and modern technology stack.</p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">

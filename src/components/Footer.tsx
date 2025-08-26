@@ -11,7 +11,6 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="text-center md:text-left mb-6 md:mb-0">
             <p className="text-muted-foreground font-space text-sm">© 2025 Rafli Wasis Anggito | Product and Data Enthusiast</p>
-            <p className="text-muted-foreground font-space text-xs mt-1">Built with React, TypeScript & Tailwind CSS</p>
           </div>
 
           <div className="flex items-center gap-4">
@@ -46,7 +45,7 @@ const Footer = () => {
             </a>
 
             <a
-              href="https://wa.me/+62811973317513"
+              href="https://wa.me/+6281973317513"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 rounded-lg border border-border bg-card hover:bg-card/80 transition-all hover:shadow-lg hover:shadow-primary/20 group"

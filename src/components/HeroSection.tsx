@@ -43,7 +43,7 @@ const HeroSection = () => {
 
             <div className="flex gap-3">
               <a
-                href={cvDownload}
+                href="/Rafli_Wasis_Anggito_CV.pdf"
                 download="Rafli_Wasis_Anggito_CV.pdf"
                 className="flex items-center gap-2 px-4 py-3 rounded-lg border border-border bg-card hover:bg-card/80 transition-all hover:shadow-lg hover:shadow-primary/20 group"
                 title="Download CV"
@@ -51,6 +51,7 @@ const HeroSection = () => {
                 <Download className="w-5 h-5 text-foreground group-hover:text-primary transition-colors" />
                 <span className="text-sm font-space text-foreground group-hover:text-primary transition-colors">Download CV</span>
               </a>
+
               <a
                 href="https://linkedin.com/in/rafliwasisanggito"
                 target="_blank"

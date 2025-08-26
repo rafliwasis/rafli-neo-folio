@@ -66,10 +66,6 @@ const ProjectsSection = () => {
           {projects.map((project, index) => (
             <div key={index} className="futuristic-card group animate-fade-up" style={{ animationDelay: `${index * 0.1}s` }}>
               <div className="flex flex-col h-full">
-                <div className="w-full h-48 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-lg mb-4 flex items-center justify-center">
-                  <span className="text-6xl">📊</span>
-                </div>
-
                 <h3 className="text-xl font-space font-bold text-foreground mb-3 group-hover:text-primary transition-colors">{project.title}</h3>
 
                 <p className="text-muted-foreground font-space text-sm leading-relaxed mb-6 flex-grow">{project.description}</p>

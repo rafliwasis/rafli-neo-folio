@@ -4,7 +4,7 @@ Hi, my name is Rafli Wasis Anggito, a fresh graduate in Information Systems from
 
 This project is built with a modern and lightweight front-end stack, and is easy to edit, run, and deploy.
 
-## 🛠 Getting Started (Local Development)
+## Getting Started (Local Development)
 
 You can work on this project using your preferred IDE.  
 Make sure **Node.js** & **npm** are installed.
@@ -21,6 +21,7 @@ npm install
 
 # 4. Start the development server
 npm run dev
+```
 
 ## Tech Stack
 This project is built with:
@@ -29,4 +30,4 @@ This project is built with:
 - React
 - shadcn-ui
 - Tailwind CSS
-```
+
